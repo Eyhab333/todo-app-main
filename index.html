@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Todo app</title>
+    <style>
+      body {
+        font-family: 'Josefin Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="icon-moon">
+        <img src="./images/icon-moon.svg" alt="moon">
+      </div>
+    </header>
+    <main>
+      <div class="create-new">
+        <div class="oval"></div>
+        <h1>Create a new todo…</h1>
+      </div>
+      <div class="todos">
+        <div class="todo">
+          <div class="oval oval-completed"></div>
+          <h2 class="completed">
+            Complete online JavaScript course
+          </h2>
+          <div class="icon-cross">
+            <img src="./images/icon-cross.svg" alt="icon-cross">
+          </div>
+        </div>
+        <hr>
+        <div class="todo">
+          <div class="oval"></div>
+          <h2>Jog around the park 3x</h2>
+          <div class="icon-cross">
+            <img src="./images/icon-cross.svg" alt="icon-cross">
+          </div>
+        </div>
+        <hr>
+        <div class="todo">
+          <div class="oval"></div>
+          <h2>10 minutes meditation</h2>
+          <div class="icon-cross">
+            <img src="./images/icon-cross.svg" alt="icon-cross">
+          </div>
+        </div>
+        <hr>
+        <div class="todo">
+          <div class="oval"></div>
+          <h2>Read for 1 hour</h2>
+          <div class="icon-cross">
+            <img src="./images/icon-cross.svg" alt="icon-cross">
+          </div>
+        </div>
+        <hr>
+        <div class="todo">
+          <div class="oval"></div>
+          <h2>Pick up groceries</h2>
+          <div class="icon-cross">
+            <img src="./images/icon-cross.svg" alt="icon-cross">
+          </div>
+        </div>
+        <hr>
+        <div class="todo">
+          <div class="oval"></div>
+          <h2>Complete Todo App on Frontend Mentor</h2>
+          <div class="icon-cross">
+            <img src="./images/icon-cross.svg" alt="icon-cross">
+          </div>
+        </div>
+        <hr>
+        <div class="info">
+          <p class="items-left">5 items left</p>
+          <button class="clear">Clear Completed</button>
+        </div>
+      </div>
+      <div class="all-active-completed">
+        <button class="all">All</button>
+        <button>Active</button>
+        <button>Completed</button>
+      </div>
+    </main>
+    <footer>
+      <p>Drag and drop to reorder list</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
