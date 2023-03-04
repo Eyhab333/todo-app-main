@@ -69,15 +69,34 @@ ul {
   list-style-type: none;
 }
 
+body {
+  background: #fafafa;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .create-new {
+  background: #ffffff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.194444px;
+  color: #9495a5;
+}
+
 /*##### for-phone-only ##########*/
 @media (max-width: 599px) {
-  body {
-    background: #fafafa;
-  }
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 3rem 1.54375rem 8.25rem 1.625rem;
     background-image: url(./images/bg-mobile-light.jpg);
   }
@@ -95,9 +114,6 @@ ul {
     margin-top: -5.75rem;
   }
   main .create-new {
-    background: #ffffff;
-    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
-    border-radius: 5px;
     height: 48px;
     width: 100%;
     padding-left: 1.25rem;
@@ -214,21 +230,448 @@ ul {
     color: #9495a5;
   }
   main .all-active-completed .all {
-    color: #3A7CFD;
+    color: #3a7cfd;
   }
   footer {
     padding: 2.5rem 1.5rem 4.5rem 1.5rem;
   }
-  footer p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
-    letter-spacing: -0.194444px;
-    color: #9495a5;
+  .show-on-desktop {
+    display: none;
   }
 }
 /*############ for-tablet-portrait-up ##############*/
+@media (600px <= width <= 899px) {
+  header {
+    padding: 3rem 6.25rem 8.25rem 6.25rem;
+    background-image: url(./images/bg-mobile-light.jpg);
+  }
+  header .logo {
+    height: 20px;
+    width: 108.14px;
+  }
+  header .icon-moon {
+    height: 20px;
+    width: 19px;
+  }
+  main {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    margin-top: -5.75rem;
+  }
+  main .create-new {
+    height: 48px;
+    width: 100%;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main .create-new .oval {
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  main .create-new h1 {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #9495a5;
+  }
+  main .todos {
+    background: #ffffff;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+  }
+  main .todos .todo {
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 20px 1fr 12px;
+    align-items: center;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+  main .todos .todo .oval {
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+  }
+  main .todos .todo .oval-completed {
+    background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  }
+  main .todos .todo .oval-completed::after {
+    content: "";
+    position: absolute;
+    background-image: url(./images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 5px;
+    width: 7.2465858459px;
+    left: 5px;
+    top: 7px;
+  }
+  main .todos .todo h2 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #494c6b;
+    justify-self: start;
+  }
+  main .todos .todo .completed {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    text-decoration-line: line-through;
+    color: #d1d2da;
+  }
+  main .todos .todo .icon-cross {
+    height: 12px;
+    width: 12px;
+    justify-self: end;
+  }
+  main .todos hr {
+    border-top: 1px solid #e3e4f1;
+  }
+  main .todos .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1.375rem 1.25rem;
+  }
+  main .todos .info .items-left,
+  main .todos .info .clear {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #9495a5;
+  }
+  main .all-active-completed {
+    margin-top: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+    padding: 0.9375rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main .all-active-completed button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.194444px;
+    color: #9495a5;
+  }
+  main .all-active-completed .all {
+    color: #3a7cfd;
+  }
+  footer {
+    padding: 2.5rem 1.5rem 4.5rem 1.5rem;
+  }
+  .show-on-desktop {
+    display: none;
+  }
+}
 /*############ for-tablet-landscape-up #############*/
+@media (900px <= width <= 1199px) {
+  header {
+    padding: 3rem 15.625rem 8.25rem 15.625rem;
+    background-image: url(./images/bg-mobile-light.jpg);
+  }
+  header .logo {
+    height: 20px;
+    width: 108.14px;
+  }
+  header .icon-moon {
+    height: 20px;
+    width: 19px;
+  }
+  main {
+    padding-left: 15.625rem;
+    padding-right: 15.625rem;
+    margin-top: -5.75rem;
+  }
+  main .create-new {
+    height: 48px;
+    width: 100%;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main .create-new .oval {
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  main .create-new h1 {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #9495a5;
+  }
+  main .todos {
+    background: #ffffff;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+  }
+  main .todos .todo {
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 20px 1fr 12px;
+    align-items: center;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+  main .todos .todo .oval {
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+  }
+  main .todos .todo .oval-completed {
+    background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  }
+  main .todos .todo .oval-completed::after {
+    content: "";
+    position: absolute;
+    background-image: url(./images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 5px;
+    width: 7.2465858459px;
+    left: 5px;
+    top: 7px;
+  }
+  main .todos .todo h2 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #494c6b;
+    justify-self: start;
+  }
+  main .todos .todo .completed {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    text-decoration-line: line-through;
+    color: #d1d2da;
+  }
+  main .todos .todo .icon-cross {
+    height: 12px;
+    width: 12px;
+    justify-self: end;
+  }
+  main .todos hr {
+    border-top: 1px solid #e3e4f1;
+  }
+  main .todos .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1.375rem 1.25rem;
+  }
+  main .todos .info .items-left,
+  main .todos .info .clear {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #9495a5;
+  }
+  main .all-active-completed {
+    margin-top: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+    padding: 0.9375rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main .all-active-completed button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.194444px;
+    color: #9495a5;
+  }
+  main .all-active-completed .all {
+    color: #3a7cfd;
+  }
+  footer {
+    padding: 2.5rem 1.5rem 4.5rem 1.5rem;
+  }
+  .show-on-desktop {
+    display: none;
+  }
+}
 /*############ for-desktop-up ###########*/
+@media (min-width: 1200px) {
+  header {
+    padding: 4.375rem 28.0625rem 11.375rem 28.125rem;
+    background-image: url(./images/bg-desktop-light.jpg);
+  }
+  header .logo {
+    height: 40px;
+    width: 167px;
+  }
+  header .icon-moon {
+    height: 26px;
+    width: 25px;
+  }
+  main {
+    padding-left: 28.125rem;
+    padding-right: 28.0625rem;
+    margin-top: -8.875rem;
+  }
+  main .create-new {
+    height: 64px;
+    width: 100%;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main .create-new .oval {
+    height: 24px;
+    width: 24px;
+    background: #ffffff;
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    margin-right: 24px;
+  }
+  main .create-new h1 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 12px;
+    letter-spacing: -0.166667px;
+    color: #9495a5;
+  }
+  main .todos {
+    background: #ffffff;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+  }
+  main .todos .todo {
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: 20px 1fr 12px;
+    align-items: center;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+  main .todos .todo .oval {
+    height: 24px;
+    width: 24px;
+    background: #ffffff;
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    margin-right: 24px;
+    position: relative;
+  }
+  main .todos .todo .oval-completed {
+    background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  }
+  main .todos .todo .oval-completed::after {
+    content: "";
+    position: absolute;
+    background-image: url(./images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 6px;
+    width: 9.8px;
+    left: 6.5px;
+    top: 8px;
+  }
+  main .todos .todo h2 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.25px;
+    color: #494c6b;
+    justify-self: start;
+  }
+  main .todos .todo .completed {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.166667px;
+    text-decoration-line: line-through;
+    color: #d1d2da;
+  }
+  main .todos .todo .icon-cross {
+    height: 12px;
+    width: 12px;
+    justify-self: end;
+    display: none;
+  }
+  main .todos .todo .show {
+    display: block;
+  }
+  main .todos hr {
+    border-top: 1px solid #e3e4f1;
+  }
+  main .todos .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1.375rem 1.25rem;
+  }
+  main .todos .info .items-left,
+  main .todos .info .clear {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.194444px;
+    color: #9495a5;
+  }
+  main .todos .info .show-on-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45%;
+  }
+  main .todos .info .show-on-desktop button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.194444px;
+    color: #9495a5;
+  }
+  main .todos .info .show-on-desktop .all {
+    color: #3a7cfd;
+  }
+  main .all-active-completed {
+    display: none;
+  }
+  footer {
+    padding: 3.0625rem 1.5rem 3.25rem 1.5rem;
+  }
+}
 /*############ for-big-desktop-up ##########*//*# sourceMappingURL=style.css.map */
